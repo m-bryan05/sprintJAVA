@@ -16,6 +16,13 @@ public class Categories {
     public Categories() {
     }
 
+    public Categories(String nomCatgeorie) {
+        this.nomCatgeorie = nomCatgeorie;
+    }
+    
+    
+   
+
     public Categories(int idCategorie, String nomCatgeorie) {
         this.idCategorie = idCategorie;
         this.nomCatgeorie = nomCatgeorie;

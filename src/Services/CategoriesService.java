@@ -18,9 +18,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 public class CategoriesService implements IService<Categories>{
     Connection cnx = MaConnexion.getInstance().getCnx();
-    Categories c = new Categories();
+   
     
     @Override
     public void ajouter(Categories c) {
@@ -37,13 +39,14 @@ public class CategoriesService implements IService<Categories>{
     }
 
     @Override
-    public List afficher() {
-        ArrayList categories = new ArrayList();
+    public ObservableList afficher() {
+        ObservableList<Categories> categories = FXCollections.observableArrayList();
         String query = "SELECT * FROM categorie_exercice";
         try{
             Statement ste = cnx.createStatement();
             ResultSet rs = ste.executeQuery(query);
             while (rs.next()){
+               Categories c = new Categories();
                c.setIdCategorie(rs.getInt("id"));
                c.setNomCatgeorie(rs.getString("nom"));
                categories.add(c);
@@ -80,6 +83,38 @@ public class CategoriesService implements IService<Categories>{
         catch (SQLException e){
             System.out.println(e.getMessage());
         } 
+    }
+    
+     public ObservableList getNomCategories(){
+        ObservableList<String> nomCategories = FXCollections.observableArrayList();
+        String query = "SELECT nom FROM categorie_exercice";
+        try{
+            Statement ste = cnx.createStatement();
+            ResultSet rs = ste.executeQuery(query);
+            while(rs.next()){
+                Categories c = new Categories();
+                nomCategories.add(rs.getString("nom"));
+            }
+
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return nomCategories;
+    }
+     
+     
+    public Integer retreiveIdCp(String s){
+        int idCat = 0;
+        String query = "SELECT id FROM categorie_exercice WHERE nom = '" + s + "'";
+        try{
+            Statement ste = cnx.createStatement();
+            ResultSet rs = ste.executeQuery(query);
+            while(rs.next())
+                idCat = (rs.getInt("id"));
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return idCat;
     }
     
     

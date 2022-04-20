@@ -18,10 +18,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class ExerciceService implements IService<Exercices>{
 Connection cnx = MaConnexion.getInstance().getCnx();
-Exercices ex = new Exercices();
+
     @Override
     public void ajouter(Exercices ex) {
          String query = "INSERT INTO EXERCICE(id_categorie_id,nom,difficulte,description) VALUES(?,?,?,?)";
@@ -40,13 +42,16 @@ Exercices ex = new Exercices();
     }
 
     @Override
-    public List afficher() {
+   
+     public ObservableList afficher() {
+         ObservableList<Exercices> exercices = FXCollections.observableArrayList();
          String query = "SELECT * FROM exercice";
-         ArrayList exercices = new ArrayList();
         try{
             Statement ste = cnx.createStatement();
             ResultSet rs = ste.executeQuery(query);
             while (rs.next()){
+               Exercices ex = new Exercices();
+               ex.setIdExercice(rs.getInt("id"));
                ex.setIdCategorieFk(rs.getInt("id_categorie_id"));
                ex.setNomExercice(rs.getString("nom"));
                ex.setDifficulteExercice(rs.getString("difficulte"));
@@ -86,5 +91,7 @@ Exercices ex = new Exercices();
             System.out.println(e.getMessage());
         } 
     }
+    
+   
     
 }

@@ -1,42 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pidev;
 
-/**
- *
- * @author wassi
- */
 import Utils.MaConnexion;
 import Entities.Categories;
 import Entities.Exercices;
 import Services.CategoriesService;
 import Services.ExerciceService;
+import java.io.IOException;
+import java.sql.SQLException;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application{
+    
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    private FXMLLoader fxmlLoader;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        MaConnexion mc = MaConnexion.getInstance();
-        Categories c = new Categories(16, "Wassim");
-        CategoriesService cs = new CategoriesService();
-        // cs.ajouter(c);
-        System.out.println(cs.afficher());
-       // cs.supprimer(c);
-      // cs.modifier(c);
-      //  System.out.println(cs.afficher());
-      int idCatFk = c.getIdCategorie();
-
-      Exercices e = new Exercices(3, "text", "text", "text", idCatFk);
-      ExerciceService es = new ExerciceService();
-     // es.ajouter(e);
-    // es.supprimer(e);
-    //es.modifier(e);
-    //System.out.println(es.afficher());
+    
+    public void start(Stage stage) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("../Controllers/GestionCategorie.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 994, 547);
+        stage.setTitle("Hello !");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
     
+     public static void main(String[] args) {        
+         launch();
+    }
+
 }
