@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminViewsController">
+   <children>
+      <Label layoutX="62.0" layoutY="3.0" text="Developped by FITHUB.TN" />
+      <AnchorPane layoutX="3.0" layoutY="21.0" prefHeight="723.0" prefWidth="329.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txt_nom" layoutX="108.0" layoutY="62.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="txt_prenom" layoutX="108.0" layoutY="113.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="txt_mail" layoutX="108.0" layoutY="162.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="txt_tel" layoutX="108.0" layoutY="211.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="txt_adresse" layoutX="108.0" layoutY="264.0" prefHeight="26.0" prefWidth="180.0" />
+            <Label layoutX="27.0" layoutY="66.0" style="-fx-background-color: white;" text="NOM:">
+               <font>
+                  <Font name="Candara Light" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="117.0" style="-fx-background-color: white;" text="PRENOM:">
+               <font>
+                  <Font name="Candara Light" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="166.0" style="-fx-background-color: white;" text="MAIL:">
+               <font>
+                  <Font name="Candara Light" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="215.0" style="-fx-background-color: white;" text="TELEPHONE:">
+               <font>
+                  <Font name="Candara Light" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="268.0" style="-fx-background-color: white;" text="ADRESSE:">
+               <font>
+                  <Font name="Candara Light" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="admin_add" layoutX="82.0" layoutY="353.0" mnemonicParsing="false" onAction="#addAdmins" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: green;" text="Ajouter">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="admin_edit" layoutX="84.0" layoutY="508.0" mnemonicParsing="false" onAction="#update_admins" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: blue;" text="Modifier">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="admin_delete" layoutX="82.0" layoutY="594.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: red;" text="Supprimer">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="admin_update" layoutX="84.0" layoutY="429.0" mnemonicParsing="false" onAction="#ActualiserAdmins" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: orange;" text="Actualiser">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="380.0" layoutY="31.0" text="GESTION DES ADMINISTRATEURS">
+         <font>
+            <Font name="Candara Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_searchadmin" layoutX="497.0" layoutY="87.0" prefHeight="35.0" prefWidth="486.0" text="ID" />
+      <Button fx:id="admin_searchadmin" layoutX="333.0" layoutY="89.0" mnemonicParsing="false" onAction="#search_admins" prefHeight="35.0" prefWidth="138.0" text="Rechercher">
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </Button>
+      <ListView fx:id="mylistadmins" layoutX="342.0" layoutY="138.0" prefHeight="607.0" prefWidth="690.0" />
+   </children>
+</AnchorPane>

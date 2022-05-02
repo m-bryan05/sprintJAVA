@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Fithub">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Fithub.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
