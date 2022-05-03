@@ -5,9 +5,12 @@
         <group>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Controllers/ControleSaisie.java</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Models/Admins.java</file>
+            <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Controllers/EventsViewsController.java</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/service/ServiceEvents.java</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Models/Events.java</file>
+            <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Views/EventsViews.fxml</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/service/ServiceAdmins.java</file>
+            <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Views/AdminViews.fxml</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/interfaces/IEvents.java</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/fithub/Fithub.java</file>
             <file>file:/D:/3A34/Semestre%206/Projet%20PideV/sprintJava/Fithub/src/Controllers/AdminViewsController.java</file>

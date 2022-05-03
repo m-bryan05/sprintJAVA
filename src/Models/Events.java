@@ -5,6 +5,7 @@
  */
 package Models;
 
+import java.sql.Blob;
 import java.util.Date;
 
 /**
@@ -18,18 +19,31 @@ public class Events {
     Date dateDebut;
     Date dateFin;
     String description;
+    Blob images;
 
-    public Events(int idEvent, String titre, String categorie, Date dateDebut, Date dateFin, String description) {
+    public Events(int idEvent, String titre, String categorie, Date dateDebut, Date dateFin, String description, Blob images) {
         this.idEvent = idEvent;
         this.titre = titre;
         this.categorie = categorie;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.description = description;
+        this.images = images;
     }
+
+    
 
     public Events() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Events(String titre, String categorie, Date dateDebut, Date dateFin, String description, Blob images) {
+        this.titre = titre;
+        this.categorie = categorie;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.description = description;
+        this.images = images;
     }
 
     public Events(String titre, String categorie, Date dateDebut, Date dateFin, String description) {
@@ -39,6 +53,10 @@ public class Events {
         this.dateFin = dateFin;
         this.description = description;
     }
+
+    
+
+    
 
    
 

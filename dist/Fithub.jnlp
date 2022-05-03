@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Fithub.jar" size="22563" download="eager" />
+    <jar href="Fithub.jar" size="356726" download="eager" />
     <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
     <jar href="lib\fontawesomefx-glyphsbrowser-all-1.0.jar" size="1662483" download="eager" />
     <jar href="lib\javax.mail.jar" size="434923" download="eager" />
