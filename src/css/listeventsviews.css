@@ -3,5 +3,32 @@
  */
 
 .mainFxmlClass {
+    
+}
 
+.search-box{
+    -fx-background-color: #fff;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0)
+}
+
+.search-button{
+    -fx-background-color: #29A9FF;
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #fff;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,1), 10.0, 0.0, 0.0, 10.0);
+}
+
+.event-box{
+    -fx-background-color: #29A9FF;
+    -fx-background-radius: 50;
 }

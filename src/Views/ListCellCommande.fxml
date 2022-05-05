@@ -4,25 +4,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="AdminCell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="680.0" style="-fx-background-color: #2b3f63;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="EventCell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="745.0" style="-fx-background-color: #2b3f63;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="adresse" layoutY="15.0" prefHeight="22.0" prefWidth="76.0" text="Adresse" textFill="WHITE">
+      <Label fx:id="Image" layoutY="15.0" prefHeight="22.0" prefWidth="76.0" text="Image" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="nom" layoutX="95.0" layoutY="11.0" prefHeight="29.0" prefWidth="91.0" text="Nom" textFill="WHITE">
+      <Label fx:id="titre" layoutX="95.0" layoutY="11.0" prefHeight="29.0" prefWidth="91.0" text="Titre" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="prenom" layoutX="202.0" layoutY="11.0" prefHeight="30.0" prefWidth="110.0" text="Prenom" textFill="WHITE">
+      <Label fx:id="categorie" layoutX="232.0" layoutY="11.0" prefHeight="30.0" prefWidth="110.0" text="Categorie" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="email" layoutX="349.0" layoutY="11.0" prefHeight="29.0" prefWidth="145.0" text="Mail" textFill="WHITE">
+      <Label fx:id="datedebut" layoutX="395.0" layoutY="11.0" prefHeight="29.0" prefWidth="145.0" text="Date de Début" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="tel" layoutX="542.0" layoutY="11.0" prefHeight="30.0" prefWidth="124.0" text="Tel" textFill="WHITE">
+      <Label fx:id="datefin" layoutX="607.0" layoutY="11.0" prefHeight="30.0" prefWidth="124.0" text="Date de Fin" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font></Label>

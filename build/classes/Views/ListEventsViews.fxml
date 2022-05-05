@@ -1,14 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListEventsViewsController" >
+<AnchorPane id="AnchorPane" prefHeight="822.0" prefWidth="1080.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListEventsViewsController">
     <stylesheets>
-        <URL value="@listeventsviews.css"/>
+        <URL value="@css.listeventsviews.css" />
     </stylesheets>
+   <children>
+      <HBox layoutX="80.0" layoutY="221.0" prefHeight="36.0" prefWidth="582.0" spacing="10.0" />
+      <HBox layoutX="692.0" layoutY="189.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="56.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="800.0" prefWidth="436.0" styleClass="right-bar" stylesheets="@../css/listeventsviews.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="118.0" prefWidth="436.0" style="-fx-background-color: #29A9FF;">
+                     <children>
+                        <Label text="Evenements" textFill="WHITE">
+                           <font>
+                              <Font name="Candara Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="66.0" prefWidth="370.0" spacing="10.0" stylesheets="@../css/listeventsviews.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField prefHeight="40.0" prefWidth="245.0" promptText="Ecrire ici pour la recherche" styleClass="transparent" stylesheets="@../css/listeventsviews.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Candara Light" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" styleClass="search-button" stylesheets="@../css/listeventsviews.css" text="Recherche" textFill="WHITE" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="436.0" />
+                  <VBox fx:id="cardEvent" alignment="CENTER" prefHeight="590.0" prefWidth="346.0" spacing="12.0" styleClass="event-box" stylesheets="@../css/listeventsviews.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Evenements disponibles" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="Candara" size="29.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="336.0">
+                           <children>
+                              <Label fx:id="nameeventprincipal" text="Seance de Sport publique">
+                                 <font>
+                                    <Font name="Corbel" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Pane prefHeight="87.0" prefWidth="75.0" />
+                              <Label fx:id="namecategorieprincipal" text="Sport">
+                                 <font>
+                                    <Font name="Corbel Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="eventimg" fitHeight="170.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ab-3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: green; -fx-background-radius: 30;" text="Ajouter un évènement" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: orange; -fx-background-radius: 30;" text="Modifier un évènement" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: red; -fx-background-radius: 30;" text="Supprimer un évènement" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="78.0" layoutY="462.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: brown; -fx-background-radius: 30;" text="Statistiques d'un évènement" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="117.0" prefWidth="658.0" style="-fx-background-color: #29A9FF;">
+                     <children>
+                        <Label prefHeight="60.0" prefWidth="177.0" text="FITHUB" textFill="WHITE">
+                           <font>
+                              <Font name="Candara Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="76.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconFit.png" />
+                           </image>
+                        </ImageView>
+                        <Pane prefHeight="100.0" prefWidth="156.0" />
+                        <ImageView fitHeight="52.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/notifications.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane prefHeight="570.0" prefWidth="600.0">
+                           <content>
+                              <GridPane prefHeight="0.0" prefWidth="6.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>

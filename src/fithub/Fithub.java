@@ -28,7 +28,7 @@ public class Fithub extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/Views/EventsViews.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/Views/ListEventsViews.fxml"));
             Scene scene = new Scene(parent);
             primaryStage.setScene(scene);
             primaryStage.initStyle(StageStyle.UTILITY);
