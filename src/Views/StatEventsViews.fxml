@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1080.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="Controllers.StatEventsViewsController">
+    <stylesheets>
+        <URL value="@css.stateventsviews.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="126.0" prefWidth="1094.0" style="-fx-background-color: #29A9FF;">
+         <children>
+            <Label layoutX="43.0" layoutY="14.0" text="Developped by FITHUB.TN" />
+            <Label layoutX="381.0" layoutY="17.0" prefHeight="70.0" prefWidth="200.0" text="FITHUB">
+               <font>
+                  <Font name="Candara Bold" size="58.0" />
+               </font>
+            </Label>
+            <Label layoutX="825.0" layoutY="91.0" text="notifications">
+               <font>
+                  <Font name="Candara Light" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="86.0" fitWidth="200.0" layoutX="581.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconFit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="84.0" layoutX="833.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/notifications.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="62.0" layoutY="173.0" prefHeight="36.0" prefWidth="326.0" text="Statistiques des évènements" underline="true">
+         <font>
+            <Font name="Candara" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
