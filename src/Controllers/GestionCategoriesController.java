@@ -9,6 +9,8 @@ import Services.CategoriesService;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +22,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -29,12 +32,24 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import pidev.Main;
 
+import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
+
+
+
 /**
  *
  * @author wassi
  */
 public class GestionCategoriesController implements Initializable{
     
+    WebView webview;
+    
+    @FXML
+    private VBox vbox;
+    
+    @FXML
+    private ListView<Categories> categoriesLv;
     
     @FXML
     private Label LbLogUser;
@@ -87,8 +102,10 @@ public class GestionCategoriesController implements Initializable{
     @FXML
     void handleMouseAction(MouseEvent event) {
         try {
-            Categories ca = tvCategorie.getSelectionModel().getSelectedItem();
+            //Categories ca = tvCategorie.getSelectionModel().getSelectedItem(); 
+            Categories ca = categoriesLv.getSelectionModel().getSelectedItem();
             tfNomCategorie.setText(ca.getNomCatgeorie());  
+            
         } catch (Exception e) {
             System.out.println("");
         }
@@ -120,8 +137,10 @@ public class GestionCategoriesController implements Initializable{
     public void showCategories() {
         try {
             ObservableList<Categories> listCategories =  cs.afficher();
-            colNomCategorie.setCellValueFactory(new PropertyValueFactory<Categories, String>("nomCatgeorie"));
-            tvCategorie.setItems(listCategories);
+          //  colNomCategorie.setCellValueFactory(new PropertyValueFactory<Categories, String>("nomCatgeorie"));
+          categoriesLv.getItems().clear();
+              categoriesLv.getItems().addAll(listCategories);
+            //tvCategorie.setItems(listCategories);
             
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -129,14 +148,15 @@ public class GestionCategoriesController implements Initializable{
     }
     
     public void supprimerCategorie() {
-            c = tvCategorie.getSelectionModel().getSelectedItem();
+            c = categoriesLv.getSelectionModel().getSelectedItem();
             cs.supprimer(c);
+            
             showCategories();
              cleanInputs();
     }
 
     public void modifierCategorie() {
-       c = tvCategorie.getSelectionModel().getSelectedItem();
+       c = categoriesLv.getSelectionModel().getSelectedItem();
        c.setNomCatgeorie(tfNomCategorie.getText());
        cs.modifier(c);
        showCategories();
@@ -162,4 +182,14 @@ public class GestionCategoriesController implements Initializable{
    public void cleanInputs(){
        tfNomCategorie.setText("");
    }
+   
+   /*public void abdoCat(){
+    webview = new WebView();
+    webview.getEngine().load("https://www.youtube.com/embed/DmHwGCNkc_w");
+    VBox vbox = new VBox(webview);
+    Scene mscene = new Scene(vbox, 960, 600);
+    stage.setScene(mscene);
+    stage.show();
+   }
+    */
 }

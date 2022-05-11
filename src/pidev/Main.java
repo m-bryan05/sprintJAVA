@@ -26,7 +26,7 @@ public class Main extends Application{
     public void start(Stage stage) throws IOException, SQLException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("../Controllers/GestionCategorie.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 994, 547);
-        stage.setTitle("Hello !");
+        stage.setTitle("Leaders Team");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

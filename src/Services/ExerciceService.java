@@ -11,15 +11,22 @@ package Services;
  */
 import Entities.Exercices;
 import Utils.MaConnexion;
+import com.sun.mail.smtp.SMTPTransport;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class ExerciceService implements IService<Exercices>{
 Connection cnx = MaConnexion.getInstance().getCnx();
@@ -92,6 +99,27 @@ Connection cnx = MaConnexion.getInstance().getCnx();
         } 
     }
     
-   
+   public void sendMail(String email) {
+        try {    
+            Properties props = new Properties();
+                props.put("mail.transport.protocol", "smtp");
+                props.put("mail.smtps.host", "smtp.gmail.com");
+                props.put("mail.smtps.auth", "true");        
+                Session session = Session.getInstance(props,null);
+                MimeMessage msg = new MimeMessage(session);        
+                msg.setFrom(new InternetAddress("<gymconnect15@gmail.com>"));
+                msg.setRecipients(Message.RecipientType.TO, email);
+                msg.setSubject("Keep Fit !");
+                msg.setSentDate(new Date(System.currentTimeMillis()));
+               String txt = "You must try this exercice ! ";
+               msg.setText(txt);  
+              SMTPTransport  st = (SMTPTransport)session.getTransport("smtps") ;
+              st.connect("smtp.gmail.com",465,"gymconnect15@gmail.com","gymconnect2022");
+              st.sendMessage(msg, msg.getAllRecipients());
+
+        }catch(Exception e ) {
+            e.printStackTrace();
+        }
+    }
     
 }

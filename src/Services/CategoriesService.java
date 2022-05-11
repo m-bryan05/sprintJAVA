@@ -19,6 +19,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
+
+
+
 import javafx.collections.ObservableList;
 public class CategoriesService implements IService<Categories>{
     Connection cnx = MaConnexion.getInstance().getCnx();

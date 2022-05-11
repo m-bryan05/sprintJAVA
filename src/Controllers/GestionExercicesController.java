@@ -4,6 +4,7 @@ package Controllers;
 
 import Entities.Categories;
 import Entities.Exercices;
+import Entities.RatingEx;
 import Services.CategoriesService;
 import Services.ExerciceService;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -30,13 +32,21 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import pidev.Main;
+import org.controlsfx.control.Rating;
 
+
+import Services.RatingService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.scene.paint.Color;
 
 
 public class GestionExercicesController implements Initializable
 {
-
-      @FXML
+    @FXML
+    private ListView<Exercices> exerciceLv; 
+     
+     @FXML
     private Label LbLogUser;
 
     @FXML
@@ -47,6 +57,9 @@ public class GestionExercicesController implements Initializable
 
     @FXML
     private Button btnSupprimerExercice;
+    
+    @FXML
+    private Button btnSendMail;
 
     @FXML
     private TableColumn<Exercices, String> colDescriptionExercice;
@@ -83,10 +96,17 @@ public class GestionExercicesController implements Initializable
     private Parent root;
     private FXMLLoader fxmlLoader;
     
+    @FXML
+    private Rating rating;
+    
+   
+    
+    
 
     CategoriesService cs = new CategoriesService();
     ExerciceService es = new ExerciceService();
-    Integer idCat;    
+    RatingService rs = new RatingService();
+    Integer idCat,exRate;    
 
     @FXML
     void handleButtonAction(ActionEvent event) {
@@ -101,7 +121,7 @@ public class GestionExercicesController implements Initializable
     @FXML
     void handleMouseAction(MouseEvent event) {
          try {
-            Exercices exc = tvExercice.getSelectionModel().getSelectedItem();
+            Exercices exc = exerciceLv.getSelectionModel().getSelectedItem();
             tfNomExercice.setText(exc.getNomExercice());  
             tfDifficulteExercice.setText(exc.getDifficulteExercice());  
             tfDescriptionExercice.setText(exc.getDescExercice());
@@ -114,12 +134,23 @@ public class GestionExercicesController implements Initializable
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        btnAjouterExercice.setTextFill(Color.WHITE);
+        btnModifierExercice.setTextFill(Color.WHITE);
+        btnSupprimerExercice.setTextFill(Color.WHITE);
+        btnSendMail.setTextFill(Color.WHITE);
         showExercices();
         ObservableList nomsCategories = FXCollections.observableArrayList(cs.getNomCategories());
         comboNomCategories.setItems(nomsCategories);
         comboNomCategories.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
              idCat = cs.retreiveIdCp(newValue);
         });
+        rating.ratingProperty().addListener(new ChangeListener<Number>(){
+            @Override
+        public void changed(ObservableValue<? extends Number> arg0, Number t, Number t1) {
+                exRate = t1.intValue();  
+            }
+        });
+       
     }
 
 
@@ -153,24 +184,26 @@ public class GestionExercicesController implements Initializable
     public void showExercices() {
         try {
             ObservableList<Exercices> listExerciceses =  es.afficher();
-            colNomExercice.setCellValueFactory(new PropertyValueFactory<Exercices, String>("nomExercice"));
+           /* colNomExercice.setCellValueFactory(new PropertyValueFactory<Exercices, String>("nomExercice"));
             colDifficulteExercice.setCellValueFactory(new PropertyValueFactory<Exercices, String>("difficulteExercice"));
             colDescriptionExercice.setCellValueFactory(new PropertyValueFactory<Exercices, String>("descExercice"));
-            tvExercice.setItems(listExerciceses);  
+            tvExercice.setItems(listExerciceses);  */
+            exerciceLv.getItems().clear();
+            exerciceLv.getItems().addAll(listExerciceses);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
     Exercices exs = new Exercices();
     public void supprimerExercice() {  
-        exs = tvExercice.getSelectionModel().getSelectedItem();
+        exs = exerciceLv.getSelectionModel().getSelectedItem();
         es.supprimer(exs);
            showExercices();
            cleanInputs();
     }
 
     public void modifierExercice() {
-       exs = tvExercice.getSelectionModel().getSelectedItem();
+       exs = exerciceLv.getSelectionModel().getSelectedItem();
        exs.setNomExercice(tfNomExercice.getText());
        exs.setDifficulteExercice(tfDifficulteExercice.getText());
        exs.setDescExercice(tfDescriptionExercice.getText());
@@ -204,4 +237,19 @@ public class GestionExercicesController implements Initializable
        tfDifficulteExercice.setText("");
        comboNomCategories.setValue("");
    }
+   
+   
+   public void rateExercice(){
+       Exercices excr = exerciceLv.getSelectionModel().getSelectedItem();
+       RatingEx r = new RatingEx();
+       r.setIdExercice(excr.getIdExercice());
+       r.setRate(exRate);
+       rs.ajouter(r);
+       
+   }
+   
+   public void sendEmail(){
+       es.sendMail("hileliwassim1@gmail.com");
+   }
+   
 }

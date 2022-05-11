@@ -69,7 +69,7 @@ public class Exercices {
 
     @Override
     public String toString() {
-        return "Exercices{" + "idExercice=" + idExercice + ", nomExercice=" + nomExercice + ", difficulteExercice=" + difficulteExercice + ", descExercice=" + descExercice + ", idCategorieFk=" + idCategorieFk + '}';
+        return "nomExercice=" + nomExercice + ", difficulteExercice=" + difficulteExercice + ", descExercice=" + descExercice + '}';
     }
   
 }

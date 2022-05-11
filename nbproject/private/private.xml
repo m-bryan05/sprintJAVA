@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Pidev/src/pidev/Main.java</file>
-            <file>file:/D:/Pidev/src/Controllers/GestionExercicesController.java</file>
-            <file>file:/D:/Pidev/src/Controllers/GestionCategoriesController.java</file>
-            <file>file:/D:/Pidev/src/Services/CategoriesService.java</file>
+            <file>file:/D:/3ème/Pidev/src/Services/ExerciceService.java</file>
+            <file>file:/D:/3ème/Pidev/src/Controllers/ExercicesShow.fxml</file>
+            <file>file:/D:/3ème/Pidev/src/Entities/Categories.java</file>
+            <file>file:/D:/3ème/Pidev/src/Controllers/GestionExercicesController.java</file>
+            <file>file:/D:/3ème/Pidev/src/Entities/Exercices.java</file>
+            <file>file:/D:/3ème/Pidev/src/pidev/Main.java</file>
+            <file>file:/D:/3ème/Pidev/src/Controllers/GestionCategoriesController.java</file>
         </group>
     </open-files>
 </project-private>
