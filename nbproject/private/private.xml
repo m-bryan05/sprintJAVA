@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/ProjectJava/src/Controllers/CategorieProduitController.java</file>
+            <file>file:/D:/ProjectJava/src/Models/CategorieProduit.java</file>
+            <file>file:/D:/ProjectJava/src/Views/CategorieProduit.fxml</file>
+            <file>file:/D:/ProjectJava/src/Views/Produit.fxml</file>
+            <file>file:/D:/ProjectJava/src/Services/CPServices.java</file>
+            <file>file:/D:/ProjectJava/src/Interface/ICPServices.java</file>
+            <file>file:/D:/ProjectJava/src/projectjava/ProjectJava.java</file>
+            <file>file:/D:/ProjectJava/src/Services/ProduitService.java</file>
+            <file>file:/D:/ProjectJava/src/Controllers/ProduitController.java</file>
+        </group>
+    </open-files>
+</project-private>

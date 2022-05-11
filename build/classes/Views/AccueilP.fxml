@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="646.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Accueil">
+    <stylesheets>
+       
+    </stylesheets>
+   <children>
+      <Pane prefHeight="566.0" prefWidth="164.0" style="-fx-background-color: #363948;">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="137.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo%20FitHUb.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="33.0" layoutY="58.0" prefHeight="35.0" prefWidth="111.0" text="Summary" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="105.0" prefHeight="35.0" prefWidth="125.0" text="Welcome to fitub" textFill="WHITE" />
+            <Label layoutX="19.0" layoutY="130.0" prefHeight="35.0" prefWidth="125.0" text="You will find our" textFill="WHITE" />
+            <Label layoutX="19.0" layoutY="155.0" prefHeight="35.0" prefWidth="125.0" text="Products here ! Enjoy" textFill="WHITE" />
+            <Label layoutX="24.0" layoutY="202.0" prefHeight="35.0" prefWidth="125.0" text="DashBoard" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="produitadd" layoutX="3.0" layoutY="262.0" mnemonicParsing="false" onAction="#switchToProduit" opacity="0.0" prefHeight="17.0" prefWidth="111.0" text="AddProduit" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="produitview" layoutX="3.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchToProduitV" opacity="0.0" prefHeight="25.0" prefWidth="111.0" text="ViewProduit" textOverrun="WORD_ELLIPSIS" />
+            <Label layoutX="25.0" layoutY="241.0" prefHeight="17.0" prefWidth="79.0" text="Product" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Label" />
+            <Label layoutX="25.0" layoutY="312.0" prefHeight="17.0" prefWidth="79.0" text="Categories" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="266.0" prefHeight="17.0" prefWidth="79.0" text="Add" textFill="WHITE" />
+            <Label layoutX="23.0" layoutY="363.0" prefHeight="17.0" prefWidth="79.0" text="View" textFill="WHITE" />
+            <Label layoutX="23.0" layoutY="339.0" prefHeight="17.0" prefWidth="79.0" text="Add" textFill="WHITE" />
+            <Label layoutX="19.0" layoutY="289.0" prefHeight="17.0" prefWidth="79.0" text="View" textFill="WHITE" />
+            <Button fx:id="categorieview" layoutX="7.0" layoutY="359.0" mnemonicParsing="false" onAction="#switchToCategorieV" opacity="0.0" prefHeight="25.0" prefWidth="111.0" text="ViewCategorie" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="categoriadd" layoutX="9.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchToCategories" opacity="0.0" prefHeight="17.0" prefWidth="111.0" text="AddCategorie" textOverrun="WORD_ELLIPSIS" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="565.0" fitWidth="620.0" layoutX="164.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/bmi-bg.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
