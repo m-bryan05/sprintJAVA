@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="1203.0" style="-fx-background-image: url('file:C:/Users/MOTEZ/Desktop/gamershub-javafx-usersAndGames/src/GymConnect/Images/bg.jpg');" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeFrontController">
+   <children>
+      <Pane prefHeight="79.0" prefWidth="1203.0" style="-fx-background-color: #05071F;">
+         <children>
+            <HBox layoutX="311.0" layoutY="21.0" spacing="20.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" onAction="#handleClicks" style="-fx-background-color: transparent;" text="Exercice" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MenuButton>
+                  <Button mnemonicParsing="false" onAction="#handleClicks" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Blog" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <MenuButton mnemonicParsing="false" onAction="#handleClicks" style="-fx-background-color: transparent;" text="Shop" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MenuButton>
+                  <Button fx:id="games" mnemonicParsing="false" onAction="#handleClicks" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Coaching" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <MenuButton mnemonicParsing="false" onAction="#handleClicks" style="-fx-background-color: transparent;" text="Sections" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="981.0" layoutY="17.0" spacing="20.0">
+               <children>
+                  <Button fx:id="logout" mnemonicParsing="false" onAction="#handleClicks" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="profile" mnemonicParsing="false" onAction="#handleClicks" style="-fx-padding: 9px; -fx-background-color: #F0882F; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-cursor: hand; -fx-pref-width: 90px;" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Line endX="100.0" layoutX="891.0" layoutY="40.0" rotate="-90.0" startX="50.0" stroke="#909090b2" strokeWidth="2.0" />
+         </children>
+      </Pane>
+      <VBox layoutX="-1.0" layoutY="79.0" prefHeight="591.0" prefWidth="1203.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1203.0">
+               <children>
+                  <Label fx:id="title" text="Title" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="70.0" />
+               </VBox.margin>
+            </HBox>
+            <Pane fx:id="content" prefHeight="497.0" prefWidth="1203.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

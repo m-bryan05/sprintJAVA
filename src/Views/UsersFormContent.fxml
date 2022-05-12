@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="530.0" prefWidth="832.0" style="-fx-background-color: transparent; -fx-background: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UsersFormContentController">
+   <content>
+      <FlowPane fx:id="content" alignment="TOP_CENTER" prefHeight="528.0" prefWidth="832.0" stylesheets="@front.css" />
+   </content>
+</ScrollPane>
