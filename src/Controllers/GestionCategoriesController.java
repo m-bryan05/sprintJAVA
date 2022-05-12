@@ -170,7 +170,7 @@ public class GestionCategoriesController implements Initializable{
     }
 
    public void switchToExercice(ActionEvent event) throws IOException {
-        fxmlLoader = new FXMLLoader(Main.class.getResource("../Controllers/GestionExercice.fxml"));
+        fxmlLoader = new FXMLLoader(Main.class.getResource("../Views/GestionExercice.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 1000, 547);
         stage.setResizable(false);

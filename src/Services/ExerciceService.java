@@ -107,14 +107,14 @@ Connection cnx = MaConnexion.getInstance().getCnx();
                 props.put("mail.smtps.auth", "true");        
                 Session session = Session.getInstance(props,null);
                 MimeMessage msg = new MimeMessage(session);        
-                msg.setFrom(new InternetAddress("<gymconnect15@gmail.com>"));
+                msg.setFrom(new InternetAddress("<gym.connect2022@gmail.com>"));
                 msg.setRecipients(Message.RecipientType.TO, email);
                 msg.setSubject("Keep Fit !");
                 msg.setSentDate(new Date(System.currentTimeMillis()));
                String txt = "You must try this exercice ! ";
                msg.setText(txt);  
               SMTPTransport  st = (SMTPTransport)session.getTransport("smtps") ;
-              st.connect("smtp.gmail.com",465,"gymconnect15@gmail.com","gymconnect2022");
+              st.connect("smtp.gmail.com",465,"gym.connect2022@gmail.com","Catalyzer1998");
               st.sendMessage(msg, msg.getAllRecipients());
 
         }catch(Exception e ) {

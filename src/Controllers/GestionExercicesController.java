@@ -223,7 +223,7 @@ public class GestionExercicesController implements Initializable
     }
 
    public void switchToCategories(ActionEvent event) throws IOException {
-        fxmlLoader = new FXMLLoader(Main.class.getResource("../Controllers/GestionCategorie.fxml"));
+        fxmlLoader = new FXMLLoader(Main.class.getResource("../Views/GestionCategorie.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 994, 547);
         stage.setTitle("Categorie Page");

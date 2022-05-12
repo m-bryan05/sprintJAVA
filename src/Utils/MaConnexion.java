@@ -37,5 +37,9 @@ public class MaConnexion {
     public Connection getCnx(){
         return cnx;
     }
+
+    public Connection getCon() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
