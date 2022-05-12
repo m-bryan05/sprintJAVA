@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="PubCell" prefHeight="249.0" prefWidth="218.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="207.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="title" layoutX="14.0" layoutY="167.0" prefHeight="18.0" prefWidth="151.0" text="title" />
+      <Label fx:id="desc" layoutX="15.0" layoutY="222.0" prefHeight="18.0" prefWidth="188.0" text="description" />
+     
+      <Label fx:id="type" layoutX="14.0" layoutY="196.0" prefHeight="18.0" prefWidth="177.0" text="type" />
+   </children>
+</AnchorPane>

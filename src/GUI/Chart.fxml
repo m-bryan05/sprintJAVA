@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="668.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ChartController">
+   <children>
+      <HBox fx:id="chartHBox" prefHeight="413.0" prefWidth="590.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="249.0" prefWidth="138.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#globalChart" prefHeight="26.0" prefWidth="143.0" text="Global">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <MenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Détailles">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#detailleBonPlan" text="Statiques" />
+                     
+                    </items>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <Button mnemonicParsing="false" onAction="#lineChart" prefHeight="26.0" prefWidth="141.0" text="Line Chart">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="chartNode" prefHeight="442.0" prefWidth="519.0" style="-fx-background-color: white;" >
+               <children>
+                  <ImageView fx:id="logoView" fitHeight="60.0" fitWidth="153.0" layoutY="398.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/ReclameTopic.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/GestionCommentaire.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/TaskCellFactory.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ListCellTopics1.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/AfficherPublicationController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/AfficherPubUnique.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/SettingsController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/TaskCellFactory6.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/TaskCellFactory3.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ListCellSuggetionsTopics.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ListCellCommande.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ListCellTopics11.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/AfficherPublication.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/settings.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/RepondreReclameTopicController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Services/CommentaireServices.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ListCellCommentsController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ReclameTopicController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/TaskCellFactory4.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ChartController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/TaskCellFactory2.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/pidev2/Main.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/GestionCommentaireController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/AjouterPublication.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/TaskCellFactory5.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/ModifierPublication.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Services/PublicationServices.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/Chart.fxml</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/GUI/topicFXMain.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ModifierPublicationController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/AjouterPublicationController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/AfficherPubUniqueController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/Pidev2/src/Controllers/ListCellPopularNews.java</file>
+        </group>
+    </open-files>
+</project-private>

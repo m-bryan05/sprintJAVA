@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="420.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReclameTopicController">
+   <children>
+      <TextField fx:id="topicName" layoutX="37.0" layoutY="138.0" prefHeight="34.0" prefWidth="346.0" promptText="PUT YOUR TOPIC SUGGETION HERE :" />
+      <Button layoutX="236.0" layoutY="460.0" mnemonicParsing="false" onAction="#send" prefHeight="26.0" prefWidth="141.0" style="-fx-background-color: #FFD700;" text="SEND" />
+      <TextField fx:id="Email" layoutX="38.0" layoutY="307.0" prefHeight="34.0" prefWidth="346.0" promptText="Email" />
+      <ComboBox fx:id="comobox" layoutX="38.0" layoutY="262.0" prefHeight="26.0" prefWidth="346.0" style="-fx-background-color: #FFD700;" />
+      <TextField fx:id="senderName" layoutX="37.0" layoutY="184.0" prefHeight="34.0" prefWidth="346.0" promptText="Your Name" />
+      <Label layoutX="38.0" layoutY="227.0" prefHeight="18.0" prefWidth="198.0" text="WHO YOU ARE ?" />
+      <TextField fx:id="textMessage" layoutX="38.0" layoutY="360.0" prefHeight="55.0" prefWidth="346.0" promptText="Why You send as this suggetions !" />
+      <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="89.0" prefWidth="420.0">
+         <children>
+            <ImageView fx:id="logoView" fitHeight="71.0" fitWidth="132.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="105.0" layoutY="45.0" prefHeight="34.0" prefWidth="282.0" text=" TOPIC SUGGETION " textFill="#2400a6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="emailCheckMark" fitHeight="18.0" fitWidth="21.0" layoutX="359.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="nomCheckMark" fitHeight="18.0" fitWidth="21.0" layoutX="359.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="senderCheckMark" fitHeight="18.0" fitWidth="21.0" layoutX="356.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="msgCheckMark" fitHeight="18.0" fitWidth="21.0" layoutX="359.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="logoView1" fitHeight="63.0" fitWidth="172.0" layoutX="3.0" layoutY="509.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

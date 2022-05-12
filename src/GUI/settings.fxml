@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="958.0" prefWidth="1259.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SettingsController">
+   <children>
+      <ListView fx:id="topicReclameListView" layoutX="337.0" layoutY="196.0" prefHeight="491.0" prefWidth="883.0" />
+      <ListView fx:id="topicsView" layoutX="47.0" layoutY="196.0" prefHeight="491.0" prefWidth="251.0" />
+      <Pane prefHeight="110.0" prefWidth="1259.0" style="-fx-background-color: #4121b4">
+         <children>
+            <ImageView fx:id="logoView" fitHeight="76.0" fitWidth="185.0" layoutX="8.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="355.0" layoutY="34.0" prefHeight="62.0" prefWidth="454.0" text="Admin Dashboard">
+               <font>
+                  <Font name="System Bold Italic" size="42.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.6166666746139526" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="47.0" layoutY="156.0" prefHeight="27.0" prefWidth="185.0" text="Authorized Topics" textFill="#1d05b9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="153.0" prefHeight="34.0" prefWidth="296.0" text="Topic Suggetions " textFill="#1d05b9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="addView" fitHeight="34.0" fitWidth="37.0" layoutX="47.0" layoutY="706.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="statiqueView" fitHeight="34.0" fitWidth="37.0" layoutX="47.0" layoutY="747.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="95.0" layoutY="713.0" prefHeight="18.0" prefWidth="101.0" text="Add topic" textFill="#f46505">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="754.0" prefHeight="18.0" prefWidth="101.0" text="Statiques" textFill="#f46505">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logoView1" fitHeight="76.0" fitWidth="200.0" layoutX="248.0" layoutY="868.0" opacity="0.65" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

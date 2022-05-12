@@ -5,16 +5,21 @@
  */
 package Entities;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  *
  * @author ASUS
  */
 public class Commentaire {
+    private static final AtomicInteger count = new AtomicInteger(0);
     private int id;
     private String nom;
     private String email;
     private String commentaire;
     private int publication_id;
+    
+    //Publication publication
 
     public Commentaire() {
     }

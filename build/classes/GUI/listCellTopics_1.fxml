@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="topicCell" prefHeight="36.0" prefWidth="242.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="topicName" prefHeight="36.0" prefWidth="187.0" text="topicName" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="deleteIconView" fitHeight="18.0" fitWidth="21.0" layoutX="213.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

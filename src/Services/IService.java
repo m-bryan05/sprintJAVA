@@ -15,7 +15,11 @@ import java.util.List;
 public interface IService<T> {
     public void ajouter(T t);
     List<T> afficher();
+    List<T> Recherche(); 
     void supprimer(T t);
     void modifier(T t);
+    int  GetPubById(T t) ;
+ 
+    
     
 }

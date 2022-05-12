@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="topicCell" prefHeight="159.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="2.0" layoutY="9.0" opacity="0.56" prefHeight="27.0" prefWidth="83.0" text="The Topic : " />
+      <Label fx:id="topicSug" layoutX="170.0" layoutY="13.0" prefHeight="18.0" prefWidth="140.0" text="Topic">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="40.0" opacity="0.7" prefHeight="18.0" prefWidth="154.0" text="Send from" />
+      <Label fx:id="emailText" layoutX="170.0" layoutY="40.0" prefHeight="18.0" prefWidth="611.0" text="email" />
+      <Label layoutY="71.0" opacity="0.7" prefHeight="18.0" prefWidth="62.0" text="Role" />
+      <Label fx:id="role" layoutX="170.0" layoutY="71.0" prefHeight="18.0" prefWidth="269.0" text="Label" />
+      <Label layoutX="2.0" layoutY="99.0" opacity="0.7" prefHeight="18.0" prefWidth="123.0" text="Message" />
+      <Label fx:id="message" layoutX="170.0" layoutY="99.0" prefHeight="27.0" prefWidth="475.0" text="Message" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="444.0" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" fx:controller="Controllers.GestionCommentaireController">
+   <children>
+      <TextField fx:id="name" layoutX="64.0" layoutY="170.0" prefHeight="40.0" prefWidth="315.0" />
+      <TextField fx:id="email" layoutX="64.0" layoutY="230.0" prefHeight="40.0" prefWidth="315.0" />
+      <TextField fx:id="comment" layoutX="64.0" layoutY="295.0" prefHeight="40.0" prefWidth="315.0" />
+      <Button layoutX="289.0" layoutY="398.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff8567" text="Delete" />
+      <Button layoutX="63.0" layoutY="398.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff8567" text="Update" />
+      <Pane layoutX="1.0" prefHeight="103.0" prefWidth="443.0">
+         <children>
+            <ImageView fx:id="logoView" fitHeight="89.0" fitWidth="178.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

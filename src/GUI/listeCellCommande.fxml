@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="PubCell" prefHeight="465.0" prefWidth="561.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="title" layoutX="114.0" layoutY="327.0" prefHeight="27.0" prefWidth="278.0" text="title" />
+      <Label fx:id="desc" layoutX="114.0" layoutY="372.0" prefHeight="58.0" prefWidth="278.0" text="description" />
+      <Label fx:id="type" layoutX="114.0" layoutY="362.0" prefHeight="18.0" prefWidth="278.0" text="Type" />
+      <ImageView fx:id="imageView" fitHeight="322.0" fitWidth="547.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="7.0" layoutY="332.0" prefHeight="18.0" prefWidth="98.0" text="Title" textFill="#7d7d7d" />
+      <Label layoutX="7.0" layoutY="362.0" prefHeight="18.0" prefWidth="98.0" text="Type :" textFill="#7d7d7d" />
+      <Label layoutX="7.0" layoutY="392.0" prefHeight="18.0" prefWidth="98.0" text="Description" textFill="#7d7d7d" />
+   </children>
+</AnchorPane>

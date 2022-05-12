@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="906.0" prefWidth="1265.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AfficherPublicationController">
+   <children>
+      <ListView fx:id="listView" layoutX="312.0" layoutY="137.0" prefHeight="718.0" prefWidth="558.0" />
+      <Label layoutX="970.0" layoutY="196.0" prefHeight="30.0" prefWidth="240.0" text="POPULAR NEWS" textFill="#4121b4">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="26.0" />
+         </font>
+      </Label>
+      <ListView fx:id="popularList" layoutX="951.0" layoutY="261.0" prefHeight="379.0" prefWidth="258.0" />
+      <Pane layoutY="-4.0" prefHeight="123.0" prefWidth="1265.0" style="-fx-background-color: #4121b4">
+         <children>
+            <ImageView fx:id="logoView" fitHeight="93.0" fitWidth="320.0" layoutX="29.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField layoutX="405.0" layoutY="57.0" opacity="0.63" prefHeight="36.0" prefWidth="344.0" promptText="Serch">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <HBox layoutX="881.0" layoutY="62.0" prefHeight="42.0" prefWidth="383.0">
+               <children>
+                  <ImageView fx:id="homzView" fitHeight="41.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="41.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="addView" fitHeight="41.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="41.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="settingIconView" fitHeight="41.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <ImageView fx:id="bgView" fitHeight="93.0" fitWidth="246.0" layoutX="1018.0" layoutY="875.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="805.0" layoutY="898.0" opacity="0.61" prefHeight="26.0" prefWidth="234.0" text="Notre commité est de fournir un service">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="805.0" layoutY="915.0" opacity="0.61" prefHeight="18.0" prefWidth="233.0" text=" honnête, amical et ponctuel.">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="805.0" layoutY="945.0" opacity="0.64" prefHeight="18.0" prefWidth="210.0" text="© Tous droits résevés 2020">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo2View" fitHeight="52.0" fitWidth="258.0" layoutX="434.0" layoutY="907.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="86.0" layoutY="214.0" text="Our Topics " textFill="#ffa600">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <ListView fx:id="topicList" layoutX="32.0" layoutY="261.0" prefHeight="386.0" prefWidth="269.0" />
+      <Label layoutX="85.0" layoutY="686.0" prefHeight="18.0" prefWidth="101.0" text="Add topic" textFill="#f46505">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="addTopicView" fitHeight="41.0" fitWidth="57.0" layoutX="28.0" layoutY="676.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="chartView" fitHeight="41.0" fitWidth="57.0" layoutX="28.0" layoutY="734.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="85.0" layoutY="744.0" prefHeight="18.0" prefWidth="101.0" text="Statiques" textFill="#f46505">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+   
+</AnchorPane>

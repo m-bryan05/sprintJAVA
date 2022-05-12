@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="507.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjouterPublicationController">
+   <children>
+      <TextField fx:id="title" layoutX="132.0" layoutY="162.0" prefHeight="26.0" prefWidth="271.0" promptText="Title" />
+      <TextField fx:id="description" layoutX="132.0" layoutY="211.0" prefHeight="64.0" prefWidth="271.0" promptText="Description" />
+      <Button layoutX="79.0" layoutY="629.0" mnemonicParsing="false" onAction="#addAction" prefHeight="37.0" prefWidth="363.0" style="-fx-background-color: #4169E1;" text="Post " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <ImageView fx:id="imageView" fitHeight="204.0" fitWidth="290.0" layoutX="123.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="lab_url" layoutX="132.0" layoutY="345.0" mnemonicParsing="false" onAction="#browse" prefHeight="27.0" prefWidth="271.0" style="-fx-background-color: #FFD700;" text="Upload publication" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label contentDisplay="RIGHT" layoutX="170.0" layoutY="108.0" prefHeight="34.0" prefWidth="178.0" text="Create a post" textFill="#0f5b81" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="typePub" layoutX="132.0" layoutY="299.0" prefHeight="26.0" prefWidth="271.0" style="-fx-background-color: #FFD700;" />
+      <Pane layoutX="-2.0" prefHeight="74.0" prefWidth="513.0" style="-fx-background-color: white">
+         <children>
+            <ImageView fx:id="logoView" fitHeight="64.0" fitWidth="200.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <ImageView fx:id="titleCheckMark" fitHeight="18.0" fitWidth="21.0" layoutX="382.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="descCheckMark" fitHeight="18.0" fitWidth="21.0" layoutX="382.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
